@@ -1,0 +1,37 @@
+//#define getchar() (frS==frT&&(frT=(frS=frBB)+fread(frBB,1,1<<15,stdin),frS==frT)?EOF:*frS++)
+//char frBB[1<<15],*frS=frBB,*frT=frBB;
+template<typename T>
+inline void read(T &x) {
+    T s = 0, w = 1;
+
+    char ch = getchar();
+
+    while (!isdigit(ch)) {
+        if (ch == '-') {
+            w = -w;
+        }
+
+        ch = getchar();
+    }
+
+    while (isdigit(ch)) {
+        s = (s << 1) + (s << 3) + ch - '0';
+        ch = getchar();
+    }
+
+    x = s * w;
+}
+
+template<typename T>
+inline void write(T x) {
+    if (x < 0) {
+        putchar('-');
+        x = -x;
+    }
+
+    if (x > 9) {
+        write(x / 10);
+    }
+
+    putchar(x % 10 + '0');
+}
