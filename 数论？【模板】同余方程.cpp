@@ -20,24 +20,24 @@ LL power(LL a, LL b, LL p) {
 		b >>= 1;
 	}
 	return ret;
-} //Çó a ^ b % p
+} //æ±‚ a ^ b % p
 
 LL gcd(LL a, LL b) {
 	if(!b) return a;
 	return gcd(b, a % b);
-} //Çó gcd(a, b)
+} //æ±‚ gcd(a, b)
 
 void Exgcd(LL a, LL b, LL &d, LL &x, LL &y) {
 	if(!b) d = a, x = 1, y = 0;
 	else Exgcd(b, a % b, d, y, x), y -= x * (a / b);
-} //Çó Ax + By = C µÄÕûÊı½â
+} //æ±‚ Ax + By = C çš„æ•´æ•°è§£
 
 void Solve(LL a, LL b, LL p) {
 	LL x, y;
 	Exgcd(a, p, d, x, y);
 	if(b % d) puts("No solution");
 	else printf("%lld\n", (x * (b / d) % (p / d) + (p / d)) % (p / d));
-} // Çó½âÏßĞÔÍ¬Óà·½³Ì a * x + p * y = b
+} // æ±‚è§£çº¿æ€§åŒä½™æ–¹ç¨‹ a * x + p * y = b
 
 map <LL, LL> Map;
 
@@ -62,7 +62,7 @@ LL BSGS(LL A, LL B, LL C) {
 		}
 	}
 	return 0;
-} // Çó½â¸ß´ÎÍ¬Óà·½³Ì a ^ x + p * y = b
+} // æ±‚è§£é«˜æ¬¡åŒä½™æ–¹ç¨‹ a ^ x + p * y = b
 
 int main() {
 
