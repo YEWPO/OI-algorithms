@@ -88,7 +88,7 @@ void kruskal()
 }
 int bznum;
 ll new_small[MAXN][20][2];
-int dep[MAXN],fro[MAXN][20];//new_small的0为最大值，1反之
+int dep[MAXN],fro[MAXN][20];//new_small碌脛0脦陋脳卯麓贸脰碌拢卢1路麓脰庐
 void dfs(int u)
 {
 	for(rg int i=0;i<ee[u].size();++i)
