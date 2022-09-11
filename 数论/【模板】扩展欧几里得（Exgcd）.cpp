@@ -6,7 +6,7 @@
 #include <functional>
 using namespace std;
 
-//Çó½â²»¶¨·½³Ì Ax + By = C µÄÕûÊı½â
+//æ±‚è§£ä¸å®šæ–¹ç¨‹ Ax + By = C çš„æ•´æ•°è§£
 
 const int MAXN = 100001;
 
@@ -24,7 +24,7 @@ int main() {
 	else {
 		x = x * C / d, y = y * C / d;
 		A /= d, B /= d;
-		x += 2 * B, y -= 2 * A;//ÇóÆäËûµÄÕûÊı½â x += m * B Í¬Ê± y -= m * A ×¢Òâ´ËÊ± B /= d, A /= d;
+		x += 2 * B, y -= 2 * A;//æ±‚å…¶ä»–çš„æ•´æ•°è§£ x += m * B åŒæ—¶ y -= m * A æ³¨æ„æ­¤æ—¶ B /= d, A /= d;
 		printf("%d %d\n", x, y);
 	}
 	return 0;
